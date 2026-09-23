@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- World 4 · Magic E Mountain -->
+  <defs>
+    <linearGradient id="sky4" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#C4B5FD"/>
+      <stop offset="1" stop-color="#EDE9FE"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#sky4)"/>
+  <circle cx="76" cy="64" r="30" fill="#FDE68A"/>
+  <circle cx="76" cy="64" r="40" fill="#FDE68A" opacity=".35"/>
+  <ellipse cx="300" cy="60" rx="40" ry="12" fill="#FFFFFF" opacity=".85"/>
+
+  <!-- far peak -->
+  <path d="M280 232 L360 100 L440 232 Z" fill="#A78BFA"/>
+  <!-- main mountain -->
+  <path d="M60 236 L200 76 L340 236 Z" fill="#8B5CF6"/>
+  <path d="M164 116 L200 76 L236 116 C224 132 212 132 200 122 C188 132 176 132 164 116 Z" fill="#FFFFFF"/>
+  <!-- magic E flag -->
+  <rect x="198" y="26" width="4" height="52" fill="#78350F"/>
+  <path d="M202 28 h44 l-10 12 10 12 h-44 z" fill="#F97316"/>
+  <text x="212" y="50" font-family="Baloo 2, Arial Rounded MT Bold, Arial, sans-serif" font-size="20" font-weight="800" fill="#FFFFFF">e!</text>
+  <!-- snow cards -->
+  <rect x="112" y="182" width="34" height="24" rx="6" fill="#FFF7E8" transform="rotate(-8 112 182)"/>
+  <rect x="252" y="188" width="34" height="24" rx="6" fill="#FFF7E8" transform="rotate(7 252 188)"/>
+  <!-- pines -->
+  <g>
+    <path d="M376 236 L392 196 L408 236 Z" fill="#15803D"/>
+    <path d="M376 220 L392 184 L408 220 Z" fill="#16A34A"/>
+    <rect x="388" y="234" width="8" height="12" fill="#B45309"/>
+  </g>
+  <g>
+    <path d="M56 240 L70 206 L84 240 Z" fill="#16A34A"/>
+    <rect x="68" y="238" width="8" height="10" fill="#B45309"/>
+  </g>
+  <rect x="0" y="232" width="480" height="68" fill="#DDD6FE"/>
+</svg>

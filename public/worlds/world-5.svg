@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- World 5 · Vowel Team Tropics -->
+  <defs>
+    <linearGradient id="sky5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FBCFE8"/>
+      <stop offset="1" stop-color="#FDE7F1"/>
+    </linearGradient>
+    <linearGradient id="sea5" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5EEAD4"/>
+      <stop offset="1" stop-color="#14B8A6"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#sky5)"/>
+  <circle cx="398" cy="62" r="30" fill="#FDE68A"/>
+  <circle cx="398" cy="62" r="40" fill="#FDE68A" opacity=".35"/>
+  <ellipse cx="120" cy="62" rx="42" ry="12" fill="#FFFFFF" opacity=".9"/>
+  <ellipse cx="156" cy="52" rx="26" ry="9" fill="#FFFFFF" opacity=".9"/>
+
+  <!-- lagoon -->
+  <rect x="0" y="140" width="480" height="60" fill="url(#sea5)"/>
+  <path d="M0 146 q28 -7 56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0 t56 0" fill="none" stroke="#FFFFFF" stroke-width="4" opacity=".55" stroke-linecap="round"/>
+
+  <!-- island -->
+  <ellipse cx="240" cy="252" rx="190" ry="46" fill="#FDE68A"/>
+  <ellipse cx="240" cy="244" rx="160" ry="34" fill="#FCD34D"/>
+
+  <!-- palm cluster -->
+  <path d="M330 232 C326 198 330 176 336 160" stroke="#B45309" stroke-width="9" fill="none" stroke-linecap="round"/>
+  <path d="M336 160 C314 140 296 142 286 156 C306 150 322 154 336 160 Z" fill="#16A34A"/>
+  <path d="M336 160 C358 140 376 142 386 156 C366 150 350 154 336 160 Z" fill="#22C55E"/>
+  <path d="M336 160 C326 134 306 128 292 134 C310 130 326 142 336 160 Z" fill="#16A34A"/>
+  <path d="M336 160 C346 134 366 128 380 134 C362 130 346 142 336 160 Z" fill="#22C55E"/>
+
+  <!-- 'ai' surf sign -->
+  <rect x="118" y="188" width="86" height="54" rx="12" fill="#FFFFFF"/>
+  <text x="139" y="226" font-family="Baloo 2, Arial Rounded MT Bold, Arial, sans-serif" font-size="34" font-weight="800" fill="#0D9488">ai</text>
+
+  <!-- toucan -->
+  <g>
+    <ellipse cx="256" cy="220" rx="20" ry="16" fill="#2D2A32"/>
+    <circle cx="244" cy="206" r="12" fill="#2D2A32"/>
+    <circle cx="241" cy="203" r="3.4" fill="#FFF7E8"/>
+    <path d="M234 206 l-20 4 20 6 z" fill="#FBBF24"/>
+    <path d="M252 234 l-2 12 M262 234 l2 12" stroke="#FBBF24" stroke-width="3.4" stroke-linecap="round"/>
+    <path d="M244 198 q-10 -12 -20 -10" stroke="#FDE047" stroke-width="4" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- hibiscus -->
+  <g>
+    <circle cx="86" cy="226" r="5" fill="#F59E0B"/>
+    <g fill="#F472B6">
+      <ellipse cx="86" cy="214" rx="6" ry="9"/>
+      <ellipse cx="86" cy="238" rx="6" ry="9"/>
+      <ellipse cx="74" cy="226" rx="9" ry="6"/>
+      <ellipse cx="98" cy="226" rx="9" ry="6"/>
+    </g>
+  </g>
+</svg>

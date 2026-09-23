@@ -35,32 +35,3 @@ export const getPhoneticSpelling = (text: string) => {
     return word;
   }).join(' ');
 };
-
-export const getPronunciationForRule = (rule: string) => {
-  const parts = rule.split('»');
-  const target = parts[parts.length - 1].trim();
-  
-  if (target.includes('=')) {
-    const [letter, sound] = target.split('=').map(s => s.trim());
-    
-    // Map of phonetic symbols to how the TTS engine should pronounce them
-    const soundMap: Record<string, string> = {
-      '/ă/': 'aah',
-      '/ĭ/': 'ih',
-      '/ŭ/': 'uh',
-      '/ĕ/': 'eh',
-      '/ŏ/': 'aw',
-      '/ā/': 'ay',
-      '/ē/': 'ee',
-      '/ī/': 'eye',
-      '/ō/': 'oh',
-      '/ū/': 'yoo'
-    };
-    
-    const readableSound = soundMap[sound] || sound.replace(/[\/]/g, '');
-    return `${letter} makes the sound ${readableSound}`;
-  }
-  
-  // E.g., "st", "sh", "th"
-  return target.split('').join(' ') + ` makes the sound ${target}`;
-};

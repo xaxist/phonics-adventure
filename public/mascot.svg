@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Phonics Adventure owl mascot -->
+  <defs>
+    <linearGradient id="wing" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FF9A5A"/>
+      <stop offset="1" stop-color="#FF7A3D"/>
+    </linearGradient>
+    <linearGradient id="belly" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FFF7E8"/>
+      <stop offset="1" stop-color="#FFE8C2"/>
+    </linearGradient>
+    <linearGradient id="head" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#8B5CF6"/>
+      <stop offset="1" stop-color="#6D4AE0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- tufts -->
+  <path d="M60 72 C50 40 66 24 88 34 C74 48 68 58 66 74 Z" fill="url(#head)"/>
+  <path d="M196 72 C206 40 190 24 168 34 C182 48 188 58 190 74 Z" fill="url(#head)"/>
+
+  <!-- head -->
+  <circle cx="128" cy="118" r="86" fill="url(#head)"/>
+
+  <!-- ear tufts inner -->
+  <path d="M74 70 C68 52 76 42 88 46 C82 54 78 62 78 72 Z" fill="#FFF7E8" opacity=".9"/>
+  <path d="M182 70 C188 52 180 42 168 46 C174 54 178 62 178 72 Z" fill="#FFF7E8" opacity=".9"/>
+
+  <!-- glasses frames -->
+  <circle cx="92" cy="112" r="30" fill="#FFFDF7"/>
+  <circle cx="164" cy="112" r="30" fill="#FFFDF7"/>
+  <circle cx="92" cy="112" r="30" fill="none" stroke="#FF7A3D" stroke-width="7"/>
+  <circle cx="164" cy="112" r="30" fill="none" stroke="#FF7A3D" stroke-width="7"/>
+  <path d="M122 110 q6 -8 12 0" fill="none" stroke="#FF7A3D" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- eyes -->
+  <circle cx="94" cy="114" r="11" fill="#2D2A32"/>
+  <circle cx="162" cy="114" r="11" fill="#2D2A32"/>
+  <circle cx="98" cy="109" r="4" fill="#fff"/>
+  <circle cx="166" cy="109" r="4" fill="#fff"/>
+
+  <!-- beak -->
+  <path d="M128 136 l14 12 -14 14 -14 -14 z" fill="#FFC53D" stroke="#F5A623" stroke-width="3" stroke-linejoin="round"/>
+
+  <!-- cheek blush -->
+  <ellipse cx="66" cy="146" rx="12" ry="7" fill="#FFB4C0" opacity=".85"/>
+  <ellipse cx="190" cy="146" rx="12" ry="7" fill="#FFB4C0" opacity=".85"/>
+
+  <!-- body -->
+  <path d="M62 210 C62 168 92 150 128 150 C164 150 194 168 194 210 C194 232 168 242 128 242 C88 242 62 232 62 210 Z" fill="url(#belly)"/>
+  <!-- wings -->
+  <path d="M60 178 C36 190 30 216 44 232 C54 224 62 208 66 192 Z" fill="url(#wing)"/>
+  <path d="M196 178 C220 190 226 216 212 232 C202 224 194 208 190 192 Z" fill="url(#wing)"/>
+  <!-- belly feather scallops -->
+  <path d="M96 200 q8 10 16 0 q8 10 16 0 q8 10 16 0" fill="none" stroke="#F5D9A8" stroke-width="5" stroke-linecap="round"/>
+  <path d="M104 220 q8 10 16 0 q8 10 16 0" fill="none" stroke="#F5D9A8" stroke-width="5" stroke-linecap="round"/>
+
+  <!-- feet -->
+  <path d="M104 240 l-6 10 M104 240 l0 12 M104 240 l6 10" stroke="#F5A623" stroke-width="7" stroke-linecap="round"/>
+  <path d="M152 240 l-6 10 M152 240 l0 12 M152 240 l6 10" stroke="#F5A623" stroke-width="7" stroke-linecap="round"/>
+</svg>

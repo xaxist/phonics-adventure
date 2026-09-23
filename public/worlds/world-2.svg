@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- World 2 · The Blend Beach -->
+  <defs>
+    <linearGradient id="sky2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#7DD3FC"/>
+      <stop offset="1" stop-color="#BAE6FD"/>
+    </linearGradient>
+    <linearGradient id="sea2" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#38BDF8"/>
+      <stop offset="1" stop-color="#0EA5E9"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#sky2)"/>
+  <circle cx="84" cy="60" r="32" fill="#FDE68A"/>
+  <circle cx="84" cy="60" r="42" fill="#FDE68A" opacity=".35"/>
+  <ellipse cx="330" cy="66" rx="46" ry="14" fill="#FFFFFF" opacity=".9"/>
+  <ellipse cx="368" cy="56" rx="28" ry="10" fill="#FFFFFF" opacity=".9"/>
+
+  <!-- sea -->
+  <rect x="0" y="130" width="480" height="70" fill="url(#sea2)"/>
+  <path d="M0 136 q30 -8 60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0 t60 0" fill="none" stroke="#FFFFFF" stroke-width="4" opacity=".6" stroke-linecap="round"/>
+  <!-- sand -->
+  <path d="M0 300 L0 196 C120 176 300 186 480 210 L480 300 Z" fill="#FDE68A"/>
+  <path d="M0 300 L0 216 C140 198 320 206 480 226 L480 300 Z" fill="#FCD34D"/>
+
+  <!-- st blend in the sand -->
+  <text x="150" y="252" font-family="Baloo 2, Arial Rounded MT Bold, Arial, sans-serif" font-size="44" font-weight="800" fill="#6D4AE0" transform="rotate(-4 150 252)">st</text>
+
+  <!-- palm tree -->
+  <path d="M392 232 C388 200 392 176 398 158" stroke="#B45309" stroke-width="10" fill="none" stroke-linecap="round"/>
+  <path d="M398 158 C376 138 356 140 344 154 C366 148 384 152 398 158 Z" fill="#16A34A"/>
+  <path d="M398 158 C420 138 440 140 452 154 C430 148 412 152 398 158 Z" fill="#22C55E"/>
+  <path d="M398 158 C388 132 368 126 352 132 C372 128 388 140 398 158 Z" fill="#16A34A"/>
+  <path d="M398 158 C408 132 428 126 444 132 C424 128 408 140 398 158 Z" fill="#22C55E"/>
+  <circle cx="394" cy="162" r="5" fill="#B45309"/>
+  <circle cx="404" cy="164" r="5" fill="#B45309"/>
+
+  <!-- beach ball -->
+  <circle cx="86" cy="248" r="20" fill="#FFFFFF"/>
+  <path d="M86 228 A20 20 0 0 1 86 268 A11 20 0 0 0 86 228 Z" fill="#EF4444"/>
+  <path d="M86 228 A20 20 0 0 0 86 268 A11 20 0 0 1 86 228 Z" fill="#3B82F6"/>
+
+  <!-- bucket -->
+  <path d="M130 240 l24 0 -4 26 -16 0 z" fill="#F97316"/>
+  <path d="M128 240 q14 -12 28 0" stroke="#C2410C" stroke-width="5" fill="none"/>
+</svg>

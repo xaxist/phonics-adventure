@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- World 7 · Multi-Syllable Meadow -->
+  <defs>
+    <linearGradient id="sky7" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#E9D5FF"/>
+      <stop offset="1" stop-color="#F5F3FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#sky7)"/>
+  <circle cx="392" cy="62" r="30" fill="#FDE68A"/>
+  <circle cx="392" cy="62" r="40" fill="#FDE68A" opacity=".3"/>
+  <ellipse cx="120" cy="66" rx="44" ry="13" fill="#FFFFFF" opacity=".85"/>
+  <ellipse cx="300" cy="90" rx="34" ry="10" fill="#FFFFFF" opacity=".7"/>
+
+  <!-- meadow -->
+  <path d="M0 300 L0 216 C110 196 220 206 330 224 C400 236 440 228 480 236 L480 300 Z" fill="#A7F3D0"/>
+  <path d="M0 300 L0 240 C130 224 250 232 480 262 L480 300 Z" fill="#6EE7B7"/>
+
+  <!-- sprouting syllable blocks -->
+  <g opacity=".9">
+    <rect x="96" y="236" width="52" height="36" rx="9" fill="#FFFFFF"/>
+    <text x="104" y="261" font-family="Baloo 2, Arial Rounded MT Bold, Arial, sans-serif" font-size="21" font-weight="800" fill="#6D4AE0">rab</text>
+    <rect x="152" y="228" width="52" height="36" rx="9" fill="#FFF7E8"/>
+    <text x="160" y="253" font-family="Baloo 2, Arial Rounded MT Bold, Arial, sans-serif" font-size="21" font-weight="800" fill="#EA580C">bit</text>
+  </g>
+
+  <!-- butterfly -->
+  <g transform="translate(296 128)">
+    <path d="M0 0 C-14 -14 -30 -8 -26 4 C-22 14 -8 12 0 2 Z" fill="#F472B6"/>
+    <path d="M0 0 C14 -14 30 -8 26 4 C22 14 8 12 0 2 Z" fill="#C4B5FD"/>
+    <rect x="-1.5" y="-4" width="3" height="18" rx="1.5" fill="#78350F"/>
+  </g>
+
+  <!-- flowers -->
+  <g fill="#F472B6">
+    <circle cx="300" cy="246" r="6"/>
+    <circle cx="322" cy="238" r="5"/>
+    <circle cx="286" cy="234" r="5"/>
+  </g>
+  <g fill="#FBBF24">
+    <circle cx="360" cy="246" r="5"/>
+    <circle cx="380" cy="240" r="4"/>
+  </g>
+</svg>

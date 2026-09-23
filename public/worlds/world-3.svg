@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 300" width="480" height="300">
+  <!-- World 3 · Digraph Desert -->
+  <defs>
+    <linearGradient id="sky3" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#FDBA74"/>
+      <stop offset="1" stop-color="#FEF3C7"/>
+    </linearGradient>
+  </defs>
+  <rect width="480" height="300" fill="url(#sky3)"/>
+  <circle cx="400" cy="70" r="40" fill="#F97316"/>
+  <circle cx="400" cy="70" r="52" fill="#F97316" opacity=".3"/>
+
+  <!-- dunes -->
+  <path d="M0 220 C80 160 180 160 260 210 C310 240 300 300 300 300 L0 300 Z" fill="#FCD34D"/>
+  <path d="M480 200 C400 160 320 170 260 216 C220 248 250 300 250 300 L480 300 Z" fill="#FBBF24"/>
+  <path d="M0 300 L0 258 C100 234 220 244 320 262 C400 276 440 268 480 276 L480 300 Z" fill="#F59E0B"/>
+
+  <!-- sh in the sand -->
+  <text x="196" y="272" font-family="Baloo 2, Arial Rounded MT Bold, Arial, sans-serif" font-size="40" font-weight="800" fill="#B45309" transform="rotate(-3 196 272)">sh</text>
+
+  <!-- cacti -->
+  <g>
+    <rect x="96" y="168" width="22" height="64" rx="11" fill="#16A34A"/>
+    <path d="M96 196 h-14 v-18" stroke="#16A34A" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M118 186 h14 v-14" stroke="#16A34A" stroke-width="12" fill="none" stroke-linecap="round"/>
+  </g>
+  <g>
+    <rect x="356" y="184" width="18" height="52" rx="9" fill="#15803D"/>
+    <path d="M356 206 h-12 v-14" stroke="#15803D" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </g>
+
+  <!-- pebbles & skull -->
+  <ellipse cx="200" cy="236" rx="8" ry="5" fill="#D97706"/>
+  <ellipse cx="300" cy="244" rx="7" ry="4" fill="#D97706"/>
+  <g>
+    <ellipse cx="288" cy="212" rx="12" ry="9" fill="#FFF7E8"/>
+    <rect x="283" y="216" width="10" height="5" rx="2" fill="#FFF7E8"/>
+    <circle cx="284" cy="210" r="2.4" fill="#78350F"/>
+    <circle cx="292" cy="210" r="2.4" fill="#78350F"/>
+  </g>
+</svg>
