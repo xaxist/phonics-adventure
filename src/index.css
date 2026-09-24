@@ -731,10 +731,11 @@ button {
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-/* Soft pastel wash of the world's theme color — the tile is never plain
-   white, but stays flat and calm. States stay readable on top of it. */
+/* Soft wash of the world's theme color: white at the top easing into a
+   pastel tint at the bottom — the tile is never plain white, but stays
+   flat and calm. States stay readable on top of it. */
 .lesson-node {
-  background: var(--primary-soft);
+  background: linear-gradient(180deg, var(--surface) 20%, var(--primary-soft) 100%);
 }
 
 /* Themed top accent bar — appears on done/current/hover cards */
@@ -800,7 +801,7 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: var(--surface);
+  background: var(--primary-soft);
   color: var(--primary-deep);
   font-family: 'Baloo 2', sans-serif;
   font-weight: 800;
@@ -817,9 +818,8 @@ button {
 }
 
 .node-stars svg {
-  color: rgba(255, 255, 255, 0.9);
-  fill: rgba(255, 255, 255, 0.9);
-  filter: drop-shadow(0 1px 1px color-mix(in srgb, var(--primary) 25%, transparent));
+  color: var(--ink-200);
+  fill: var(--ink-200);
 }
 
 .node-stars svg.filled {
