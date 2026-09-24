@@ -70,7 +70,6 @@ export const WorldPath: React.FC<WorldPathProps> = ({
               className={`lesson-node ${starCount > 0 ? 'done' : ''} ${isCurrent ? 'current' : ''}`}
               onClick={() => onSelectLesson(lesson)}
             >
-              <span className="node-wave" aria-hidden="true" />
               <span className="node-top">
                 <span className="node-num">{starCount > 0 ? '✓' : idx + 1}</span>
                 <span className="node-stars" aria-label={`${starCount} of 3 stars`}>

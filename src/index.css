@@ -731,29 +731,13 @@ button {
   transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
 }
 
-/* Subtle wave tint in the world's theme color: a single smooth bump that
-   starts at the card's vertical midpoint and flows to the bottom edge. */
-.node-wave {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  height: 50%;
-  pointer-events: none;
-  opacity: 0.09;
-  background: var(--primary);
-  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
-  -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' preserveAspectRatio='none'%3E%3Cpath d='M0 50 C55 8 145 8 200 50 L200 100 L0 100 Z' fill='%23000'/%3E%3C/svg%3E");
-  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 100' preserveAspectRatio='none'%3E%3Cpath d='M0 50 C55 8 145 8 200 50 L200 100 L0 100 Z' fill='%23000'/%3E%3C/svg%3E");
-  -webkit-mask-size: 100% 100%;
-  mask-size: 100% 100%;
-  transition: opacity 0.18s ease;
+/* Soft pastel wash of the world's theme color — the tile is never plain
+   white, but stays flat and calm. States stay readable on top of it. */
+.lesson-node {
+  background: var(--primary-soft);
 }
 
-.lesson-node:hover .node-wave,
-.lesson-node.current .node-wave { opacity: 0.16; }
-
-/* Themed accent bar — appears on done/current/hover cards */
+/* Themed top accent bar — appears on done/current/hover cards */
 .lesson-node::before {
   content: '';
   position: absolute;
@@ -762,7 +746,7 @@ button {
   right: 18px;
   height: 5px;
   border-radius: 0 0 999px 999px;
-  background: var(--grad-primary);
+  background: var(--primary);
   opacity: 0;
   transition: opacity 0.18s ease;
 }
@@ -778,7 +762,7 @@ button {
 
 .lesson-node.current {
   border: 2px solid var(--primary);
-  box-shadow: var(--shadow-primary);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 25%, transparent);
 }
 
 .lesson-node.current::after {
@@ -786,14 +770,14 @@ button {
   position: absolute;
   top: -0.75rem;
   right: 0.8rem;
-  background: var(--grad-primary);
+  background: var(--primary);
   color: #fff;
   font-size: 0.62rem;
   font-weight: 800;
   letter-spacing: 0.06em;
   padding: 0.2rem 0.55rem;
   border-radius: var(--radius-pill);
-  box-shadow: var(--shadow-primary);
+  box-shadow: 0 4px 14px color-mix(in srgb, var(--primary) 30%, transparent);
   animation: badgeBounce 2.4s ease-in-out infinite;
 }
 
@@ -816,14 +800,14 @@ button {
   align-items: center;
   justify-content: center;
   border-radius: var(--radius-md);
-  background: var(--primary-soft);
+  background: var(--surface);
   color: var(--primary-deep);
   font-family: 'Baloo 2', sans-serif;
   font-weight: 800;
 }
 
 .lesson-node.done .node-num {
-  background: var(--grad-primary);
+  background: var(--primary);
   color: #fff;
 }
 
@@ -833,8 +817,9 @@ button {
 }
 
 .node-stars svg {
-  color: var(--ink-200);
-  fill: var(--ink-200);
+  color: rgba(255, 255, 255, 0.9);
+  fill: rgba(255, 255, 255, 0.9);
+  filter: drop-shadow(0 1px 1px color-mix(in srgb, var(--primary) 25%, transparent));
 }
 
 .node-stars svg.filled {
