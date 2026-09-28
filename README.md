@@ -36,10 +36,14 @@ node test.js       # Puppeteer smoke test (expects dev server on :5173)
 - **Sound Cards** (ages 2–4) — all 44 phonemes as full-screen cards in Jolly Phonics
   teaching order: giant Capital+small letter pair, keyword emoji, tap-to-hear,
   turtle slow replay, swipe/arrows, 8 group dots; tap counts persist and each
-  sound earns an "explored" star after 5 taps. The phoneme itself is *synthesized*
-  with Web Audio DSP (`src/speech/phonemeSynth.ts` — formant vowels, filtered-noise
-  fricatives, burst stops) so /s/ is a true "sss" rather than TTS letter-spelling,
-  then the keyword word is spoken via TTS (with a respelling fallback)
+  sound earns an "explored" star after 5 taps. Each phoneme plays a **real human
+  recording** (`public/phonemes/*.m4a`) built by `scripts/fetch_audio.mjs` from
+  public-domain Wikimedia Commons IPA recordings — silence-trimmed, loudness-
+  normalized, first-utterance-only, chained with ffmpeg for compound sounds
+  (qu = k+w, ai = e+i, …). Credits in `ATTRIBUTIONS.md` +
+  `public/phonemes/attribution.json`. A Web Audio synth
+  (`src/speech/phonemeSynth.ts`, voice-matched to the selected TTS speaker)
+  backs it up if a recording can't play, then a TTS chant as final fallback
 - **Hash routing** (`#/world/2`, `#/lesson/x`, `#/sounds`) so browser back/forward work
 - **PWA** — installable, works offline, custom owl mascot + hand-drawn SVG worlds
 

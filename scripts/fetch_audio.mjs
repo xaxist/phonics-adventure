@@ -9,11 +9,12 @@
  *
  * Usage: bun scripts/fetch_audio.mjs
  */
-import { existsSync, mkdirSync, writeFileSync, rmSync } from 'node:fs';
+import { existsSync, mkdirSync, writeFileSync, rmSync, renameSync } from 'node:fs';
 import { spawnSync } from 'node:child_process';
 
 const OUT_DIR = 'public/phonemes';
 const TMP = '/tmp/phoneme-units';
+const TMP_TRIM = '/tmp/phoneme-units-trim';
 const UA = 'PhonicsAdventure/1.0 (educational app; local dev)';
 const sleep = (ms) => new Promise((r) => setTimeout(r, ms));
 
@@ -35,8 +36,6 @@ const UNITS = {
   t: ['Voiceless alveolar stop.ogg', 'Voiceless alveolar plosive.ogg'],
   v: ['Voiced labiodental fricative.ogg'],
   w: ['Labio-velar approximant.ogg', 'Voiced labio-velar approximant.ogg'],
-  x: ['Compressed /x/008.ogg'],
-  y: ['Close front unrounded vowel.ogg'],
   z: ['Voiced alveolar sibilant.ogg', 'Voiced alveolar fricative.ogg'],
   ng: ['Velar nasal.ogg'],
   ch: ['Voiceless palato-alveolar affricate.ogg'],
@@ -83,7 +82,6 @@ const ATTRS = {
   t: ['Voiceless alveolar stop.ogg', 'Peter Isota', 'P'],
   v: ['Voiced labiodental fricative.ogg', 'Peter Isota', 'P'],
   w: ['Labio-velar approximant.ogg', 'Peter Isota', 'P'],
-  x: ['Compressed /x/008.ogg', 'Peter Isota', 'P'],
   y: ['Close front unrounded vowel.ogg', 'Peter Isota', 'P'],
   z: ['Voiced alveolar sibilant.ogg', 'Peter Isota', 'P'],
   ng: ['Velar nasal.ogg', 'Peter Isota', 'P'],
@@ -143,7 +141,7 @@ const COMPOSITES = {
   v: ['v'], z: ['z'], ng: ['ng'], ch: ['ch'], sh: ['sh'],
   th: ['th'], 'th-voiced': ['dh'], wh: ['hw'],
   // Consonants built from units
-  qu: ['k', 'w'], x: ['x', 's'], y: ['i'], w: ['w'],
+  qu: ['k', 'w'], x: ['k', 's'], y: ['i'], w: ['w'],
   // Short vowels
   a: ['ae'], e: ['eh'], i: ['ih'], o: ['o'], u: ['u2'],
   // Long vowels
@@ -203,6 +201,58 @@ async function download(url, out) {
   return false;
 }
 
+/**
+ * Trim + normalize a raw unit into a clean mono WAV: strips the dead air
+ * around the spoken phoneme (Commons units carry seconds of silence), evens
+ * loudness across units, and adds a small tail pad so chained sounds get a
+ * natural gap.
+ */
+function trimUnit(unit) {
+  const out = `${TMP_TRIM}/${unit}.wav`;
+  if (existsSync(out)) return out;
+  const ok = ffmpeg([
+    '-i', `${TMP}/${unit}.ogg`,
+    '-af',
+    'silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.02,' +
+    'areverse,' +
+    'silenceremove=start_periods=1:start_threshold=-40dB:start_silence=0.02,' +
+    'areverse,' +
+    'speechnorm=e=3:r=0.00005:l=1,' +
+    'afade=t=in:st=0:d=0.008,' +
+    'apad=pad_dur=0.03',
+    '-ar', '44100', '-ac', '1', out,
+  ]);
+  if (!ok) return null;
+  return keepFirstUtterance(out);
+}
+
+/**
+ * The Commons unit recordings repeat the phoneme 2–3 times with gaps
+ * ("k… k… k"). A flashcard needs ONE clean utterance — cut everything
+ * after the first long silence.
+ */
+function keepFirstUtterance(file) {
+  const probe = spawnSync(
+    'ffmpeg',
+    ['-i', file, '-af', 'silencedetect=noise=-38dB:d=0.14', '-f', 'null', '-'],
+    { encoding: 'utf8' },
+  );
+  const match = /silence_start: ([\d.]+)/.exec(probe.stderr ?? '');
+  if (!match) return file; // single utterance already
+  const cut = Number(match[1]);
+  if (cut < 0.15) return file; // degenerate — keep whole file
+  const tmp2 = `${file}.cut.wav`;
+  const ok = ffmpeg([
+    '-i', file,
+    '-t', String(cut + 0.01),
+    '-af', `afade=t=out:st=${Math.max(0, cut - 0.05)}:d=0.05,apad=pad_dur=0.04`,
+    tmp2,
+  ]);
+  if (!ok) return file;
+  renameSync(tmp2, file);
+  return file;
+}
+
 function ffmpeg(args) {
   return spawnSync('ffmpeg', ['-y', '-loglevel', 'error', ...args], { stdio: 'inherit' }).status === 0;
 }
@@ -233,13 +283,23 @@ for (const [unit, candidates] of wanted) {
 }
 if (missing.length) console.log(`MISSING UNITS: ${missing.join(', ')}`);
 
+// Trim + normalize every unit needed by a composite.
+mkdirSync(TMP_TRIM, { recursive: true });
+const neededUnits = [...new Set(Object.values(COMPOSITES).flat())];
+const trimFailed = [];
+for (const u of neededUnits) {
+  if (!existsSync(`${TMP}/${u}.ogg`)) continue; // missing download — already reported
+  if (!trimUnit(u)) trimFailed.push(u);
+}
+if (trimFailed.length) console.log(`TRIM FAILED: ${trimFailed.join(', ')}`);
+
 // Build composites.
 let built = 0, failed = [];
 const builtNames = [];
 for (const [name, seq] of Object.entries(COMPOSITES)) {
   const out = `${OUT_DIR}/${name}.m4a`;
   if (existsSync(out)) { built++; builtNames.push(name); continue; }
-  const parts = seq.map((u) => `${TMP}/${u}.ogg`);
+  const parts = seq.map((u) => `${TMP_TRIM}/${u}.wav`);
   if (parts.some((p) => !existsSync(p))) { failed.push(name); continue; }
   const inputs = parts.flatMap((p) => ['-i', p]);
   const fc = `${seq.map((_, i) => `[${i}:a]`).join('')}concat=n=${seq.length}:v=0:a=1[a]`;
