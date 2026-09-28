@@ -156,10 +156,11 @@ export const PracticeArcade: React.FC<PracticeArcadeProps> = ({ pool, speechCtl,
 
   // Spell It tile pick.
   const pickTile = (tileIdx: number) => {
-    if (!round || phase !== 'asking') return;
+    if (!round || round.kind !== 'spell' || phase !== 'asking') return;
     if (picked.includes(tileIdx)) return;
     const nextLetter = round.answer[picked.length];
-    if (round.answer[tileIdx] === nextLetter) {
+    const tileLetter = round.tiles[tileIdx];
+    if (tileLetter === nextLetter) {
       const nextPicked = [...picked, tileIdx];
       setPicked(nextPicked);
       sfxTap();
