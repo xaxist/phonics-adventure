@@ -4,8 +4,9 @@ import { Home } from './components/Home';
 import { WorldPath } from './components/WorldPath';
 import { LessonView } from './components/LessonView';
 import { Quiz } from './components/Quiz';
-import { PracticeQuiz } from './components/PracticeQuiz';
+import { PracticeArcade } from './components/PracticeArcade';
 import { Celebration } from './components/Celebration';
+import { SoundCards } from './components/SoundCards';
 import { SettingsSheet } from './components/SettingsSheet';
 import { Button } from './components/ui/Button';
 import { World, Lesson } from './types';
@@ -30,7 +31,8 @@ type Screen =
   | { kind: 'lesson'; lesson: Lesson; world: World }
   | { kind: 'quiz'; lesson: Lesson; world: World }
   | { kind: 'celebrate'; lesson: Lesson; world: World; stars: number }
-  | { kind: 'practice' };
+  | { kind: 'arcade' }
+  | { kind: 'sounds' };
 
 export default function App() {
   const [route, navigate] = useHashRoute();
@@ -68,8 +70,11 @@ export default function App() {
       const hit = allLessons.find((x) => x.lesson.id === route.lessonId);
       if (hit) return { kind: 'lesson', ...hit };
     }
-    if (route.screen === 'practice') {
-      return { kind: 'practice' };
+    if (route.screen === 'arcade') {
+      return { kind: 'arcade' };
+    }
+    if (route.screen === 'sounds') {
+      return { kind: 'sounds' };
     }
     return { kind: 'home' };
   }, [route]);
@@ -251,20 +256,20 @@ export default function App() {
               if (continueTarget) goLesson(continueTarget.lesson, continueTarget.world);
             }}
             onPractice={() => navigate('/practice')}
+            onSounds={() => navigate('/sounds')}
           />
         )}
 
-        {screen.kind === 'practice' && (
-          <PracticeQuiz
+        {screen.kind === 'arcade' && (
+          <PracticeArcade
             pool={practicePool}
             speechCtl={speechCtl}
             onBack={() => navigate('/')}
-            onFinish={(stars) => {
-              setLastStars(stars);
-              navigate('/');
-              window.setTimeout(() => window.dispatchEvent(new CustomEvent('phonics:cheer', { detail: `Great job! You earned ${stars} ${stars === 1 ? 'star' : 'stars'}!` })), 400);
-            }}
           />
+        )}
+
+        {screen.kind === 'sounds' && (
+          <SoundCards speechCtl={speechCtl} settings={settings} onBack={() => navigate('/')} />
         )}
 
         {screen.kind === 'world' && (

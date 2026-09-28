@@ -12,7 +12,10 @@ function parseHash(): Route {
     return { screen: 'lesson', lessonId: decodeURIComponent(tail) };
   }
   if (head === 'practice') {
-    return { screen: 'practice' };
+    return { screen: 'arcade' };
+  }
+  if (head === 'sounds') {
+    return { screen: 'sounds' };
   }
   return { screen: 'home' };
 }
@@ -21,7 +24,8 @@ export type Route =
   | { screen: 'home' }
   | { screen: 'world'; worldId: number }
   | { screen: 'lesson'; lessonId: string }
-  | { screen: 'practice' };
+  | { screen: 'arcade' }
+  | { screen: 'sounds' };
 
 /** Tiny hash router with browser back/forward support. */
 export function useHashRoute(): [Route, (to: string) => void] {

@@ -1,0 +1,612 @@
+{
+  "project": "Phonics Adventure — phoneme recordings",
+  "note": "Real human phoneme recordings from Wikimedia Commons, concatenated with ffmpeg into the final sounds. Public domain / CC0. Each unit keeps its source file below.",
+  "sounds": [
+    {
+      "file": "b.m4a",
+      "units": [
+        {
+          "file": "B voiced retroflex stop.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:B%20voiced%20retroflex%20stop.ogg"
+        }
+      ]
+    },
+    {
+      "file": "d.m4a",
+      "units": [
+        {
+          "file": "Voiced alveolar stop.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiced%20alveolar%20stop.ogg"
+        }
+      ]
+    },
+    {
+      "file": "f.m4a",
+      "units": [
+        {
+          "file": "Voiceless labiodental fricative.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20labiodental%20fricative.ogg"
+        }
+      ]
+    },
+    {
+      "file": "g.m4a",
+      "units": [
+        {
+          "file": "Voiced velar stop.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiced%20velar%20stop.ogg"
+        }
+      ]
+    },
+    {
+      "file": "h.m4a",
+      "units": [
+        {
+          "file": "Voiceless glottal fricative.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20glottal%20fricative.ogg"
+        }
+      ]
+    },
+    {
+      "file": "j.m4a",
+      "units": [
+        {
+          "file": "Voiced palato-alveolar affricate.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiced%20palato-alveolar%20affricate.ogg"
+        }
+      ]
+    },
+    {
+      "file": "k.m4a",
+      "units": [
+        {
+          "file": "Voiceless velar stop.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20velar%20stop.ogg"
+        }
+      ]
+    },
+    {
+      "file": "l.m4a",
+      "units": [
+        {
+          "file": "Alveolar lateral approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20lateral%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "m.m4a",
+      "units": [
+        {
+          "file": "Bilabial nasal.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Bilabial%20nasal.ogg"
+        }
+      ]
+    },
+    {
+      "file": "n.m4a",
+      "units": [
+        {
+          "file": "Alveolar nasal.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20nasal.ogg"
+        }
+      ]
+    },
+    {
+      "file": "p.m4a",
+      "units": [
+        {
+          "file": "Voiceless bilabial plosive.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20bilabial%20plosive.ogg"
+        }
+      ]
+    },
+    {
+      "file": "r.m4a",
+      "units": [
+        {
+          "file": "Alveolar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "s.m4a",
+      "units": [
+        {
+          "file": "Voiceless alveolar sibilant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20alveolar%20sibilant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "t.m4a",
+      "units": [
+        {
+          "file": "Voiceless alveolar stop.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20alveolar%20stop.ogg"
+        }
+      ]
+    },
+    {
+      "file": "v.m4a",
+      "units": [
+        {
+          "file": "Voiced labiodental fricative.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiced%20labiodental%20fricative.ogg"
+        }
+      ]
+    },
+    {
+      "file": "z.m4a",
+      "units": [
+        {
+          "file": "Voiced alveolar sibilant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiced%20alveolar%20sibilant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ng.m4a",
+      "units": [
+        {
+          "file": "Velar nasal.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Velar%20nasal.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ch.m4a",
+      "units": [
+        {
+          "file": "Voiceless palato-alveolar affricate.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20palato-alveolar%20affricate.ogg"
+        }
+      ]
+    },
+    {
+      "file": "sh.m4a",
+      "units": [
+        {
+          "file": "Voiceless palato-alveolar sibilant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20palato-alveolar%20sibilant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "th.m4a",
+      "units": [
+        {
+          "file": "Voiceless dental fricative.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20dental%20fricative.ogg"
+        }
+      ]
+    },
+    {
+      "file": "th-voiced.m4a",
+      "units": [
+        {
+          "file": "Voiced dental fricative.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiced%20dental%20fricative.ogg"
+        }
+      ]
+    },
+    {
+      "file": "wh.m4a",
+      "units": [
+        {
+          "file": "Voiceless labialized palato-alveolar fricative.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20labialized%20palato-alveolar%20fricative.ogg"
+        }
+      ]
+    },
+    {
+      "file": "qu.m4a",
+      "units": [
+        {
+          "file": "Voiceless velar stop.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20velar%20stop.ogg"
+        },
+        {
+          "file": "Labio-velar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Labio-velar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "x.m4a",
+      "units": [
+        {
+          "file": "Compressed /x/008.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Compressed%20%2Fx%2F008.ogg"
+        },
+        {
+          "file": "Voiceless alveolar sibilant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Voiceless%20alveolar%20sibilant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "y.m4a",
+      "units": [
+        {
+          "file": "Close front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "w.m4a",
+      "units": [
+        {
+          "file": "Labio-velar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Labio-velar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "a.m4a",
+      "units": [
+        {
+          "file": "Near-open front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-open%20front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "e.m4a",
+      "units": [
+        {
+          "file": "Open-mid front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open-mid%20front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "i.m4a",
+      "units": [
+        {
+          "file": "Near-close near-front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-close%20near-front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "o.m4a",
+      "units": [
+        {
+          "file": "Open back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open%20back%20rounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "u.m4a",
+      "units": [
+        {
+          "file": "Open-mid back unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open-mid%20back%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ai.m4a",
+      "units": [
+        {
+          "file": "Close-mid front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close-mid%20front%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Close front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ee.m4a",
+      "units": [
+        {
+          "file": "Close front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "igh.m4a",
+      "units": [
+        {
+          "file": "Open front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open%20front%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Close front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "oa.m4a",
+      "units": [
+        {
+          "file": "Close-mid back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close-mid%20back%20rounded%20vowel.ogg"
+        },
+        {
+          "file": "Near-close near-back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-close%20near-back%20rounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "oo.m4a",
+      "units": [
+        {
+          "file": "Close back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20back%20rounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "yoo.m4a",
+      "units": [
+        {
+          "file": "Close front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20front%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Close back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20back%20rounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "schwa.m4a",
+      "units": [
+        {
+          "file": "Mid central vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Mid%20central%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "air.m4a",
+      "units": [
+        {
+          "file": "Near-open front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-open%20front%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Alveolar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ar.m4a",
+      "units": [
+        {
+          "file": "Open back unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open%20back%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Alveolar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "eer.m4a",
+      "units": [
+        {
+          "file": "Close front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Close%20front%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Alveolar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "er.m4a",
+      "units": [
+        {
+          "file": "R-colored vowel, central.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:R-colored%20vowel%2C%20central.ogg"
+        }
+      ]
+    },
+    {
+      "file": "or.m4a",
+      "units": [
+        {
+          "file": "Open-mid back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open-mid%20back%20rounded%20vowel.ogg"
+        },
+        {
+          "file": "Alveolar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ure.m4a",
+      "units": [
+        {
+          "file": "Near-close near-back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-close%20near-back%20rounded%20vowel.ogg"
+        },
+        {
+          "file": "Alveolar approximant.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Alveolar%20approximant.ogg"
+        }
+      ]
+    },
+    {
+      "file": "aw2.m4a",
+      "units": [
+        {
+          "file": "Open-mid back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open-mid%20back%20rounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "ow.m4a",
+      "units": [
+        {
+          "file": "Open front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open%20front%20unrounded%20vowel.ogg"
+        },
+        {
+          "file": "Near-close near-back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-close%20near-back%20rounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "oi.m4a",
+      "units": [
+        {
+          "file": "Open-mid back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Open-mid%20back%20rounded%20vowel.ogg"
+        },
+        {
+          "file": "Near-close near-front unrounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-close%20near-front%20unrounded%20vowel.ogg"
+        }
+      ]
+    },
+    {
+      "file": "book.m4a",
+      "units": [
+        {
+          "file": "Near-close near-back rounded vowel.ogg",
+          "author": "Peter Isota",
+          "license": "Public domain / CC0",
+          "source": "https://commons.wikimedia.org/wiki/File:Near-close%20near-back%20rounded%20vowel.ogg"
+        }
+      ]
+    }
+  ]
+}

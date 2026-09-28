@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Play, Dumbbell } from 'lucide-react';
+import { Star, Play, Shapes, Gamepad2 } from 'lucide-react';
 import { World } from '../types';
 import { Button } from './ui/Button';
 import { ProgressRing } from './ui/ProgressRing';
@@ -13,6 +13,7 @@ interface HomeProps {
   onOpenWorld: (worldId: number) => void;
   onContinue: () => void;
   onPractice: () => void;
+  onSounds: () => void;
   totalStars: number;
 }
 
@@ -23,6 +24,7 @@ export const Home: React.FC<HomeProps> = ({
   onOpenWorld,
   onContinue,
   onPractice,
+  onSounds,
   totalStars,
 }) => {
   const totalCompleted = countCompleted(progress);
@@ -66,10 +68,18 @@ export const Home: React.FC<HomeProps> = ({
             <Button
               size="xl"
               variant="secondary"
-              icon={<Dumbbell size={22} />}
+              icon={<Shapes size={22} />}
+              onClick={onSounds}
+            >
+              Sound Cards
+            </Button>
+            <Button
+              size="xl"
+              variant="secondary"
+              icon={<Gamepad2 size={22} />}
               onClick={onPractice}
             >
-              Practice
+              Quiz Arcade
             </Button>
           </div>
         </div>
